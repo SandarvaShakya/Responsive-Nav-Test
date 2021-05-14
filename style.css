@@ -5,6 +5,8 @@
 }
 
 body {
+  height: 100vh;
+  border: 1px solid red;
   overflow-x: hidden;
 }
 
@@ -59,7 +61,7 @@ nav {
   display: none;
 }
 
-@media (max-width: 780px) {
+@media screen and (max-width: 780px) {
   nav {
     position: relative;
   }
@@ -69,23 +71,25 @@ nav {
     background-color: #145;
     width: 100%;
     top: 100%;
-    left: 0;
-    transform: translateX(100%);
-    transition: transform 0.7s ease-in;
+    right: 0;
+    transform: translateY(-150%);
+    transition: transform 0.5s ease-in;
+    z-index: -1;
   }
 
   .nav-content {
+    display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
 
   .nav-content li {
-    margin: 0 10%;
     padding: 1rem;
     width: 100%;
     text-align: right;
     cursor: pointer;
+    margin-right: 10%;
   }
 
   .nav-content li:hover {
@@ -99,7 +103,7 @@ nav {
   }
 
   .toggle {
-    transform: translateX(0%);
-    transition: transform 0.7s ease-in;
+    transform: translateY(0%);
+    transition: transform 0.5s ease-in;
   }
 }
